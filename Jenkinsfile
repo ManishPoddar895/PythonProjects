@@ -2,9 +2,18 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        echo 'hello fro Build stage'
-        sh 'mkdir jenkins'
+      parallel {
+        stage('Build') {
+          steps {
+            echo 'hello fro Build stage'
+            sh 'mkdir jenkins'
+          }
+        }
+        stage('') {
+          steps {
+            echo 'parallel'
+          }
+        }
       }
     }
     stage('test') {
