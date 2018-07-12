@@ -6,10 +6,9 @@ pipeline {
         stage('Build') {
           steps {
             echo 'hello fro Build stage'
-            sh 'mkdir jenkins'
           }
         }
-        stage('') {
+        stage('error') {
           steps {
             echo 'parallel'
           }
