@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'hello fro Build stage'
+        sh 'mkdir jenkins'
       }
     }
     stage('test') {
